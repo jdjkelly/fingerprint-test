@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FingerprintTest</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/fingerprint-test.css">
+  </head>
+  <body>
+    <script>
+      window.FingerprintTestENV = {{ENV}};
+      window.EmberENV = window.FingerprintTestENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/fingerprint-test.js"></script>
+    <script>
+      window.FingerprintTest = require('fingerprint-test/app')['default'].create(FingerprintTestENV.APP);
+    </script>
+  </body>
+</html>
